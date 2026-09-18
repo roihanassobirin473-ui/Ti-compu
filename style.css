@@ -28,14 +28,14 @@ nav {
     height: 76px;
     z-index: 999;
 
-    background: rgba(255,255,255,0.97);
+    background: rgba(255, 255, 255, 0.97);
 
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid #e5e7eb;
 
     box-shadow:
-        0 4px 20px rgba(0,0,0,0.08);
+        0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -79,12 +79,14 @@ nav {
 
 .nav-links {
     display: flex;
-
     align-items: center;
 
     gap: 8px;
 
     list-style: none;
+
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -109,7 +111,6 @@ nav {
 
 .nav-links a:hover {
     color: #0b63f6;
-
     background: #f0f6ff;
 }
 
@@ -139,7 +140,7 @@ nav {
 }
 
 
-/* TOMBOL WHATSAPP NAVBAR */
+/* TOMBOL WHATSAPP */
 
 .nav-links a.nav-wa {
     background: #0b3d91;
@@ -263,8 +264,7 @@ nav {
 }
 
 .btn-outline {
-    border:
-        1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
     color: white;
 }
@@ -280,10 +280,10 @@ nav {
 
 .hero-card {
     background:
-        rgba(255,255,255,0.1);
+        rgba(255, 255, 255, 0.1);
 
     border:
-        1px solid rgba(255,255,255,0.2);
+        1px solid rgba(255, 255, 255, 0.2);
 
     padding: 30px;
 
@@ -359,7 +359,7 @@ section {
     overflow: hidden;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.07);
+        0 8px 25px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
@@ -466,7 +466,7 @@ section {
     border-radius: 18px;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.05);
+        0 5px 20px rgba(0, 0, 0, 0.05);
 
     transition: 0.3s;
 }
@@ -475,7 +475,7 @@ section {
     transform: translateY(-5px);
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.09);
+        0 10px 25px rgba(0, 0, 0, 0.09);
 }
 
 .service-icon {
@@ -548,7 +548,7 @@ section {
     border-radius: 14px;
 
     box-shadow:
-        0 5px 18px rgba(0,0,0,0.05);
+        0 5px 18px rgba(0, 0, 0, 0.05);
 
     transition: 0.3s;
 }
@@ -660,7 +660,7 @@ footer {
     text-decoration: none;
 
     box-shadow:
-        0 5px 20px rgba(0,0,0,0.25);
+        0 5px 20px rgba(0, 0, 0, 0.25);
 
     z-index: 1000;
 
@@ -695,7 +695,25 @@ footer {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
+
+        gap: 2px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+        max-width: 75%;
+    }
+
+    .nav-links a {
+        padding: 8px 9px;
+
+        font-size: 12px;
+    }
+
+    .nav-links a.nav-wa {
+        padding: 8px 12px;
     }
 
     .hero {
@@ -754,6 +772,15 @@ footer {
 
 @media (max-width: 450px) {
 
+    .nav-links {
+        max-width: 72%;
+    }
+
+    .nav-links li:nth-child(4),
+    .nav-links li:nth-child(5) {
+        display: none;
+    }
+
     .service-grid {
         grid-template-columns: 1fr;
     }
@@ -769,6 +796,7 @@ footer {
     .wa {
         width: 54px;
         height: 54px;
+
         right: 16px;
         bottom: 16px;
     }
