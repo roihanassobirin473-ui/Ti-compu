@@ -34,8 +34,7 @@ nav {
 
     border-bottom: 1px solid #e5e7eb;
 
-    box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -51,27 +50,46 @@ nav {
 }
 
 
-/* LOGO */
+/* =========================
+   LOGO NAVBAR
+========================= */
 
 .logo {
+    width: 80px;
+    height: 55px;
+
     display: flex;
     align-items: center;
+
+    flex-shrink: 0;
+
     text-decoration: none;
+
+    overflow: hidden;
 }
 
 .logo img {
-    width: 80px;
-    height: auto;
+    width: 70px !important;
+    height: 50px !important;
+
+    max-width: 70px !important;
+    max-height: 50px !important;
+
+    object-fit: contain;
+
     display: block;
 }
 
-/* MENU */
+
+/* =========================
+   MENU NAVBAR
+========================= */
 
 .nav-links {
     display: flex;
     align-items: center;
 
-    gap: 8px;
+    gap: 5px;
 
     list-style: none;
 
@@ -101,6 +119,7 @@ nav {
 
 .nav-links a:hover {
     color: #0b63f6;
+
     background: #f0f6ff;
 }
 
@@ -127,31 +146,6 @@ nav {
 
 .nav-links a:hover::after {
     width: 20px;
-}
-
-
-/* TOMBOL WHATSAPP */
-
-.nav-links a.nav-wa {
-    background: #0b3d91;
-
-    color: white;
-
-    padding: 10px 18px;
-
-    margin-left: 5px;
-}
-
-.nav-links a.nav-wa:hover {
-    background: #0b63f6;
-
-    color: white;
-
-    transform: translateY(-2px);
-}
-
-.nav-links a.nav-wa::after {
-    display: none;
 }
 
 
@@ -186,8 +180,7 @@ nav {
 
     display: grid;
 
-    grid-template-columns:
-        1.1fr 0.9fr;
+    grid-template-columns: 1.1fr 0.9fr;
 
     gap: 50px;
 
@@ -219,7 +212,9 @@ nav {
 }
 
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
 .buttons {
     display: flex;
@@ -266,14 +261,14 @@ nav {
 }
 
 
-/* HERO CARD */
+/* =========================
+   HERO CARD
+========================= */
 
 .hero-card {
-    background:
-        rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
 
-    border:
-        1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     padding: 30px;
 
@@ -335,8 +330,7 @@ section {
 .products {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -348,8 +342,7 @@ section {
 
     overflow: hidden;
 
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
@@ -440,8 +433,7 @@ section {
 .service-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 }
@@ -455,8 +447,7 @@ section {
 
     border-radius: 18px;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 
     transition: 0.3s;
 }
@@ -464,8 +455,7 @@ section {
 .service:hover {
     transform: translateY(-5px);
 
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.09);
 }
 
 .service-icon {
@@ -494,8 +484,7 @@ section {
 .about {
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 50px;
 
@@ -537,8 +526,7 @@ section {
 
     border-radius: 14px;
 
-    box-shadow:
-        0 5px 18px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
 
     transition: 0.3s;
 }
@@ -649,8 +637,7 @@ footer {
 
     text-decoration: none;
 
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 
     z-index: 1000;
 
@@ -677,23 +664,46 @@ footer {
     }
 
     .nav-container {
-        padding: 0 16px;
+        padding: 0 12px;
     }
 
+
+    /* LOGO MOBILE */
+
     .logo {
-        font-size: 21px;
+        width: 65px;
+        height: 48px;
+
+        flex-shrink: 0;
     }
+
+    .logo img {
+        width: 58px !important;
+        height: 42px !important;
+
+        max-width: 58px !important;
+        max-height: 42px !important;
+    }
+
+
+    /* MENU MOBILE */
 
     .nav-links {
         display: flex;
 
-        gap: 2px;
+        gap: 1px;
 
         overflow-x: auto;
 
         white-space: nowrap;
 
-        max-width: 75%;
+        max-width: calc(100% - 70px);
+
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
     }
 
     .nav-links a {
@@ -702,9 +712,8 @@ footer {
         font-size: 12px;
     }
 
-    .nav-links a.nav-wa {
-        padding: 8px 12px;
-    }
+
+    /* HERO MOBILE */
 
     .hero {
         padding-top: 80px;
@@ -734,13 +743,22 @@ footer {
         margin: auto;
     }
 
+
+    /* LAPTOP MOBILE */
+
     .products {
         grid-template-columns: 1fr;
     }
 
+
+    /* SERVICE MOBILE */
+
     .service-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+
+    /* ABOUT MOBILE */
 
     .about {
         grid-template-columns: 1fr;
@@ -754,21 +772,46 @@ footer {
         font-size: 28px;
     }
 
+
+    /* TITLE MOBILE */
+
     .section-title h2 {
         font-size: 29px;
     }
 }
 
 
+/* =========================
+   HP KECIL
+========================= */
+
 @media (max-width: 450px) {
 
-    .nav-links {
-        max-width: 72%;
+    .nav-container {
+        padding: 0 10px;
     }
 
-    .nav-links li:nth-child(4),
-    .nav-links li:nth-child(5) {
-        display: none;
+    .logo {
+        width: 60px;
+        height: 46px;
+    }
+
+    .logo img {
+        width: 54px !important;
+        height: 40px !important;
+
+        max-width: 54px !important;
+        max-height: 40px !important;
+    }
+
+    .nav-links {
+        max-width: calc(100% - 64px);
+    }
+
+    .nav-links a {
+        padding: 8px 8px;
+
+        font-size: 11px;
     }
 
     .service-grid {
@@ -790,4 +833,4 @@ footer {
         right: 16px;
         bottom: 16px;
     }
-    }
+}
