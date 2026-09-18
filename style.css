@@ -54,26 +54,16 @@ nav {
 /* LOGO */
 
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-
-    color: #0b3d91;
-
-    letter-spacing: 1px;
-
+    display: flex;
+    align-items: center;
     text-decoration: none;
-
-    transition: 0.3s;
 }
 
-.logo:hover {
-    transform: scale(1.03);
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
 }
-
-.logo span {
-    color: #111827;
-}
-
 
 /* MENU */
 
